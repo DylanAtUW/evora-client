@@ -1,0 +1,232 @@
+/*
+ * Styles for the frontend
+ */
+
+.App {
+  text-align: center;
+}
+
+.Interface {
+  display: grid;
+  grid-auto-flow: column;
+  margin-top: -1%;
+}
+
+.Controls {
+  display: grid;
+  justify-content: space between;
+  margin-left: 15%;
+  margin-top: 1em;
+}
+
+.exposure-controls label {
+  display:block;
+  margin: 8px;
+}
+
+.exposure-controls input {
+  margin-left: 4px;
+}
+
+.ImageTypeSelector {
+  text-align: middle;
+  border: 1px solid black;
+}
+
+.Status label{
+  text-align: left;
+  display: inline-block;
+  margin: 4px 4px 10px 4px;
+}
+
+.statusMessage {
+  display: block;
+  margin: 10px 0;
+}
+
+.Temperature label{
+  text-align: center;
+  display: inline-block;
+  margin: 4px 4px 10px 4px;
+}
+
+.Temperature button {
+  width: 37px;
+  margin-left: 10px;
+}
+
+.Temperature input {
+  display: inline-block;
+  width: 26px;
+  padding-right: 25px;
+  margin: 10px 0px 0 10px;
+}
+
+.Temperature input[type="text"]::placeholder {
+  text-align: right;
+}
+
+.tempCelsiusIcon {
+  position: relative;
+  color: black;
+}
+
+.tempCelsiusIcon::before {
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 999;
+  position: absolute;
+  top: 2px;
+  left: 46px;
+  content: "°C";
+}
+
+.tempMessage {
+  display: block;
+  margin: 10px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.Logo {
+  height: 90px;
+  width: 90px;
+  border-radius: 30px;
+  margin-top: 1%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #b4fc25;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.blink {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+body {
+  background: linear-gradient(45deg, rgb(78, 76, 160) 0%, rgb(35, 17, 65) 20%, rgb(53, 32, 90) 50%, rgb(35, 17, 65) 80%, rgb(78, 76, 160) 100%);
+  color: white;
+}
+
+.display {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 3%;
+}
+
+.display div {
+  margin: auto;
+}
+
+fieldset.filter > label,button  {
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+fieldset {
+  border: 1px solid;
+  border-radius: 5px;
+  background-color: rgb(41, 37, 37);
+}
+.graphContainer {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tempGraphOFF {
+  font-weight: 600;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 80px !important;
+  background-color: rgb(14, 184, 25);
+  border: 3px solid black;
+}
+
+.tempGraphON {
+  font-weight: 600;
+  color: white;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 90px !important;
+  background-color: rgb(214, 0, 0);
+  border: 3px solid black;
+}
+.indeterminate-progress-bar {
+  /* Color */
+  background-color: #d1d5db;
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Size */
+  height: 0.5rem;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.indeterminate-progress-bar__progress {
+  /* Color */
+  background-color: #3b82f6;
+
+  /* Rounded border */
+  border-radius: 9999px;
+
+  /* Absolute position */
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 50%;
+
+  /* Move the bar infinitely */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: indeterminate-progress-bar;
+}
+
+@keyframes indeterminate-progress-bar {
+  from {
+      left: -50%;
+  }
+  to {
+      left: 100%;
+  }
+}
